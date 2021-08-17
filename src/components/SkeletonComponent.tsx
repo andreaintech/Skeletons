@@ -24,12 +24,7 @@ const SkeletonComponent = (props: any) => {
     }, []);
 
     return (
-        <View style={{
-            backgroundColor: '#a0a0a0',
-            borderColor: '#b0b0b0',
-            height: 150,
-            width
-        }}>
+        <View style={styles.container}>
             <AnimatedLG
                 colors={['#a0a0a0', '#b0b0b0', '#b0b0b0', '#a0a0a0',]}
                 start={{ x: 0, y: 0 }}
@@ -38,13 +33,18 @@ const SkeletonComponent = (props: any) => {
                     ...StyleSheet.absoluteFillObject,
                     transform: [{ translateX }],
                 }}
-
             />
-
         </View>
     )
 }
 
 export default SkeletonComponent
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#a0a0a0',
+        borderColor: '#b0b0b0',
+        height: 150,
+        width
+    }
+})
